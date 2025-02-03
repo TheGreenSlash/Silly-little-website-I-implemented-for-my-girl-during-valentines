@@ -1,0 +1,232 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    background-image: url('hearts.png');
+    background-repeat: repeat;
+    background-size: contain;
+    overflow: hidden;
+
+}
+.initial-box-wrapper{
+    z-index: 1;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
+    animation-delay: 2s;
+}
+.initial-box{
+    background: rgb(226, 54, 54);
+    width: 50vw;
+    height: 70vh;
+    margin-top: 15vh ;
+    border-radius: 10px;
+    opacity: 1;
+    text-align: center;
+}
+.initial-box h1{
+    padding-top: 30%;
+
+}
+
+.sticker{
+    position: relative;
+    background: transparent;
+    margin-top: -40vh;
+    margin-left: 42vw;
+    overflow: hidden;
+    display: flex;
+    width: 7vw;
+    height: 14vh;
+}
+.sticker img{
+    max-width: 100%;
+    height: auto;
+}
+span{
+    font-family: "Emilys Candy", serif;
+    font-size: larger;
+    font-weight: 300;
+    color: white;
+}
+
+@keyframes moveDownFade {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(150vh);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes moveUp{
+    0% {
+        transform: translateY(30vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+#nonAnimatedDiv{
+    position: fixed;
+    top: 0;
+    left: 30vw;
+    width: 40vw;
+    height: 100vh;
+    background:transparent;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    pointer-events: all;
+    z-index: 1;
+    
+
+}
+.upper-final-box{
+    position: inherit;
+    top: 0;
+    
+    width: 35vw;
+    height: 45vh;
+    background: rgb(255, 182, 193);
+    opacity: 0; /* Initially hidden */
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-left: 5%;
+    align-items: center;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0 ease-in;
+}
+.upper-final-box h1{
+    font-family: "Emilys Candy", serif;
+    font-size: 60px;
+    word-spacing: 2px;
+    
+    font-weight: 900;
+    color:  rgb(226, 54, 54);
+}
+.yes-button{
+    position: absolute;
+    top: 45vh;
+    margin: 0%;
+    width: 40vw;
+    height: 10vh;
+    background: rgb(255, 182, 193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0;
+}
+.yes-button .yesButton{
+    
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    font-family:  "Emilys Candy", serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(226, 54, 54);
+    cursor: pointer;
+}
+.yes-button .yesButton:hover{
+    background-color: rgb(196, 35, 35) ;
+}
+.yesButton{
+    
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    font-family:  "Emilys Candy", serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(226, 54, 54);
+    cursor: pointer;
+}
+.yesButton:hover{
+    background-color: rgb(196, 35, 35) ;
+}
+
+.no-button{
+    position: absolute;
+    top: 55vh;
+    margin: 0%;
+    width: 40vw;
+    height: 10vh;
+    background: rgb(255, 182, 193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0;
+}
+.no-button .noButton{
+    width: 50px;
+    height: 30px;
+    border-radius: 7px;
+    border: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight:bold;
+    color:rgb(226, 54, 54) ;
+    background-color: white;
+    cursor: pointer;
+}
+
+#filler-div{
+    position: absolute;
+    top: 65vh;
+    margin: 0%;
+    width: 40vw;
+    height: 50vh;
+    background-color: rgb(255, 182, 193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: ease-in;
+}
+#gif-wrapper{
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0 ease-in;
+}
+#gif-wrapper img{
+    padding: 20px;
+    transform: rotate(7deg);
+    background-color:rgb(145, 39, 39);
+}
+#filler-div .message{
+    font-family: "Emilys Candy", serif;
+    padding: 20px;
+    font-size: 30px;
+    word-spacing: 2px;
+    font-weight: 900;
+    color:  rgb(226, 54, 54);
+
+}
+@keyframes moveUpFadeIn{
+    0% {
+        transform: translateY(30vh);
+         opacity: 0;
+    }
+    100% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
